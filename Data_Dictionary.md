@@ -1,5 +1,5 @@
 # Data Dictionary of the Dataset
-
+## The data-set related to life expectancy, health factors for 193 countries has been collected from the WHO data repository website and it's corresponding economic data was collected from United Nation website. Among all categories of health-related factors only those critical factors were chosen which are more representative.
 ### 1.	Country
 ### 2.	Year
 ### 3.	Status
