@@ -13,3 +13,5 @@ Life Expectancy
 #### Independent Variables:
 Status, Adult Mortality, infant deaths, percentage expenditure, under-five deaths, Alcohol, HIV/AIDS, BMI, Total expenditure, GDP, Population, Income composition of resources, Schooling.
  
+# Correlation Scatter Plot matrix
+This plot shows the correlation of target variable vs all dependent variables.
