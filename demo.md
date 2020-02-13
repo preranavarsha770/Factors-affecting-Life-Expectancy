@@ -8,7 +8,7 @@ Analyzing the different aspects such as growth of the country, population densit
 #### Dependent Variables:
 Life Expectancy
 #### Specific Questions to Investigate:
-1.Impact of life expectancy on developing countries.
+1.Impact of life expectancy on developing countries.                                                                                       
 2.Impact of life expectancy on developed countries.
 #### Independent Variables:
 Status, Adult Mortality, infant deaths, percentage expenditure, under-five deaths, Alcohol, HIV/AIDS, BMI, Total expenditure, GDP, Population, Income composition of resources, Schooling.
