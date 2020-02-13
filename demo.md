@@ -13,19 +13,14 @@ Life Expectancy
 #### Independent Variables:
 Status, Adult Mortality, infant deaths, percentage expenditure, under-five deaths, Alcohol, HIV/AIDS, BMI, Total expenditure, GDP, Population, Income composition of resources, Schooling.
  
+## Summary Analysis
+This provides the summary distribution of dataset of how widely the data has been spread.
+
 # Correlation Scatter Plot matrix
 This plot shows the correlation of target variable vs all dependent variables.
 
+![WhatsApp Image 2020-02-12 at 7 13 20 PM](https://user-images.githubusercontent.com/60514533/74389733-21dd3100-4dcd-11ea-985c-34e16edcc664.jpeg)
 
-#### Code:
-install.packages("dplyr")
-library(dplyr)
-dat
-newdata <- na.omit(dat)
-newdata2 <- select(newdata, -c(Hepatitis.B))
-newdata3 <- select(newdata2, -c(1,2,3,9,10,12,14,18,19))
-newdata3 
-cor(newdata3[,1:11])
-install.packages("GGally")
-library(GGally)
-ggpairs(as.data.frame(newdata3[,1:11]))
+#### Code:                                                                                            
+
+
