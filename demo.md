@@ -16,7 +16,8 @@ Status, Adult Mortality, infant deaths, percentage expenditure, under-five death
 ## Summary Analysis
 This provides the summary distribution of dataset of how widely the data has been spread.
 
-![summary_LE](https://user-images.githubusercontent.com/60514533/74389988-edb64000-4dcd-11ea-866a-2fadd99320c8.PNG)
+![summary](https://user-images.githubusercontent.com/60514533/74390812-5999a800-4dd0-11ea-8bac-2545ac6d2dca.PNG)
+
 
 
 # Correlation Scatter Plot matrix
