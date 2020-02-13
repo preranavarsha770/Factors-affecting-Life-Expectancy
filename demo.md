@@ -5,4 +5,11 @@
 
 #### SMART Goal:
 Analyzing the different aspects such as growth of the country, population density, Economic condition, Mortality rates of the country and various other factors which can could lead to the increment or decrement of the life expectancy 
+#### Dependent Variables:
+Life Expectancy
+#### Specific Questions to Investigate:
+1.Impact of life expectancy on developing countries.
+2.Impact of life expectancy on developed countries.
+#### Independent Variables:
+Status, Adult Mortality, infant deaths, percentage expenditure, under-five deaths, Alcohol, HIV/AIDS, BMI, Total expenditure, GDP, Population, Income composition of resources, Schooling.
  
