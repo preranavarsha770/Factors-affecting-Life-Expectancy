@@ -15,3 +15,17 @@ Status, Adult Mortality, infant deaths, percentage expenditure, under-five death
  
 # Correlation Scatter Plot matrix
 This plot shows the correlation of target variable vs all dependent variables.
+
+
+#### Code:
+install.packages("dplyr")
+library(dplyr)
+dat
+newdata <- na.omit(dat)
+newdata2 <- select(newdata, -c(Hepatitis.B))
+newdata3 <- select(newdata2, -c(1,2,3,9,10,12,14,18,19))
+newdata3 
+cor(newdata3[,1:11])
+install.packages("GGally")
+library(GGally)
+ggpairs(as.data.frame(newdata3[,1:11]))
