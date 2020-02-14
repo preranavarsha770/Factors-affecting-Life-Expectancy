@@ -56,7 +56,8 @@ This plot shows the correlation of target variable vs all dependent variables.Co
 
 We can observe that Adult mortality ,HIV aids,Income composition,Schooling Alcohol,Percentage expenditure,GDP are positivly correlated while population,Infant deaths and Under five deaths are negativly correlated.
 
-![WhatsApp Image 2020-02-12 at 7 13 20 PM](https://user-images.githubusercontent.com/60514533/74389733-21dd3100-4dcd-11ea-985c-34e16edcc664.jpeg)
+![WhatsApp Image 2020-02-13 at 7 53 32 PM](https://user-images.githubusercontent.com/60514533/74492594-6932f280-4e9d-11ea-9b34-6aeb79a275d2.jpeg)
+
 
 #### Code:                                                                                            
 
