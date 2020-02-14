@@ -50,7 +50,8 @@ We know that lower the p-value (<0.05) , more is the significance. From the belo
 
 
 # Correlation Scatter Plot matrix
-#####This plot shows the correlation of target variable vs all dependent variables.Correlation ranges from -1 to 1.Value towards -1 are negatively correlated and values towards 1 are positively correlated and if the correlation is 0 then there is no relationship between the variables.Positive and negative determines the direction of the relationship of the given two variables ,While the number indicates the strength of the relationship between two variables
+##### This plot shows the correlation of target variable vs all dependent variables.Correlation ranges from -1 to 1.Value towards -1 are negatively correlated and values towards 1 are positively correlated and if the correlation is 0 then there is no relationship between the variables.
+#### Positive and negative determines the direction of the relationship of the given two variables ,While the number indicates the strength of the relationship between two variables
 
 We can observe that Income composition,Schooling Alcohol,Percentage expenditure,GDP,BMI are positivly correlated while Adult mortality and HIV aids and thinness are negatively correlated. Population,Infant deaths and Under five deaths are less correlated.
 
