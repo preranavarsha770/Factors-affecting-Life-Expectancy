@@ -56,7 +56,6 @@ We can observe that Income composition,Schooling Alcohol,Percentage expenditure,
 
 ![WhatsApp Image 2020-02-13 at 7 53 32 PM](https://user-images.githubusercontent.com/60514533/74492594-6932f280-4e9d-11ea-9b34-6aeb79a275d2.jpeg)
 
-![WhatsApp Image 2020-02-13 at 8 02 22 PM](https://user-images.githubusercontent.com/60514533/74492694-bd3dd700-4e9d-11ea-8f9d-a3a4c33ffadc.jpeg)
 
 #### Code:                                                                                            
 
