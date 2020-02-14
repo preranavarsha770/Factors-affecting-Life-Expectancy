@@ -17,7 +17,7 @@ Life Expectancy
 1.Impact of life expectancy on developing countries.                                                                                       
 2.Impact of life expectancy on developed countries.
 #### Independent Variables:
-Status, Adult Mortality, infant deaths, percentage expenditure, under-five deaths, Alcohol, HIV/AIDS, BMI, Total expenditure, GDP, Population, Income composition of resources, Schooling.
+Status, Adult Mortality, infant deaths, percentage expenditure, Hepatitis B, Measles, Polio, Diphtheria, under-five deaths, Alcohol, HIV/AIDS, BMI, Total expenditure, GDP, Population, thinness 1-19 years,thinness 5-9 years,Income composition of resources, Schooling.
 
 # Key Performance Indicator
 
