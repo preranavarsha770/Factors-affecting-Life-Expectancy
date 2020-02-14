@@ -5,7 +5,7 @@
  
  ![sasp_ideal](https://user-images.githubusercontent.com/60514533/74491635-35a29900-4e9a-11ea-9df6-32c54d0a7e5a.PNG)
 
-## SPAP for our model is as follows:
+## SPAP for the Dataset:
 
 ![WhatsApp Image 2020-02-12 at 7 05 14 PM](https://user-images.githubusercontent.com/60514533/74389003-e6d9fe00-4dca-11ea-8b01-12a2c237abcb.jpeg)
 
