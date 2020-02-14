@@ -27,15 +27,15 @@ Status, Adult Mortality, infant deaths, percentage expenditure, under-five death
 |1.	    |Life expectancy          |Life Expectancy in age                                                                       |
 |2.	    |Status                   |Developed or not Developed Country                                                           |
 |3.	    |Adult Mortality          |Mortality Rates of both sexes                                                                |
-|5.	    |Alcohol                  |Alcohol, recorded per capita (15+) consumption                                               |
-|6.	    |Percentage expenditure   |Expenditure on health as a percentage of Gross Domestic Product per capita(%)                |
-|7.     |BMI                      |Body Mass Index of entire population                                                         |
-|9.     |Total expenditure        |General government expenditure on health as a percentage of total government expenditure (%) |
-|10.    |HIV/AIDS                 |Deaths per 1 000 live births HIV/AIDS (0-4 years)                                            |
-|11.    |GDP                      |Domestic Product per capita (in USD)                                                         |
-|12.    |Population               |Population of the country                                                                    |
-|13.    |Income composition of resources      |Income composition of resourcesHuman Development Index                                       |
-|14.    |Schooling                |Number of years of Schooling(years)                                                          |
+|4.	    |Alcohol                  |Alcohol, recorded per capita (15+) consumption                                               |
+|5.	    |Percentage expenditure   |Expenditure on health as a percentage of Gross Domestic Product per capita(%)                |
+|6.     |BMI                      |Body Mass Index of entire population                                                         |
+|7.     |Total expenditure        |General government expenditure on health as a percentage of total government expenditure (%) |
+|8.    |HIV/AIDS                 |Deaths per 1 000 live births HIV/AIDS (0-4 years)                                            |
+|9.    |GDP                      |Domestic Product per capita (in USD)                                                         |
+|10.    |Population               |Population of the country                                                                    |
+|11.    |Income composition of resources      |Income composition of resourcesHuman Development Index                                       |
+|12.    |Schooling                |Number of years of Schooling(years)                                                          |
  
 ## Summary Analysis
 This provides the summary distribution of dataset of how widely the data has been spread.
@@ -52,7 +52,7 @@ We know that lower the p-value (<0.05) , more is the significance. From the belo
 # Correlation Scatter Plot matrix
 This plot shows the correlation of target variable vs all dependent variables.Correlation ranges from -1 to 1.Value towards -1 are negatively correlated and values towards 1 are positively correlated and if the correlation is 0 then there is no relationship between the variables.
 
-We can observe that Adult mortality ,HIV aids,Income composition,Schooling Alcohol,Percentage expenditure,GDP are positivly correlated while population,Infant deaths and Under five deaths are less correlated.
+We can observe that Income composition,Schooling Alcohol,Percentage expenditure,GDP,BMI are positivly correlated while Adult mortality and HIV aids and thinness are negatively correlated. Population,Infant deaths and Under five deaths are less correlated.
 
 ![WhatsApp Image 2020-02-13 at 7 53 32 PM](https://user-images.githubusercontent.com/60514533/74492594-6932f280-4e9d-11ea-9b34-6aeb79a275d2.jpeg)
 
