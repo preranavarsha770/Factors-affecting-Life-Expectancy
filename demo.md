@@ -1,5 +1,7 @@
 # Structured Pyramid Analysis Plans
-
+ The rationale for using a structured plan is to avoid the very inefficient process of exploring a data set aimlessly, without hypotheses. This is especially true for analytics teams, that would have a difficult time collaborating without some kind of roadmap to use for direction.
+ An SPAP is outlined in the following image. The terms are defined beneath it.
+ 
 
 ![WhatsApp Image 2020-02-12 at 7 05 14 PM](https://user-images.githubusercontent.com/60514533/74389003-e6d9fe00-4dca-11ea-8b01-12a2c237abcb.jpeg)
 
