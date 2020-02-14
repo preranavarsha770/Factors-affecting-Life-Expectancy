@@ -2,6 +2,10 @@
  The rationale for using a structured plan is to avoid the very inefficient process of exploring a data set aimlessly, without hypotheses. This is especially true for analytics teams, that would have a difficult time collaborating without some kind of roadmap to use for direction.
  An SPAP is outlined in the following image. The terms are defined beneath it.
  
+ 
+ ![sasp_ideal](https://user-images.githubusercontent.com/60514533/74491635-35a29900-4e9a-11ea-9df6-32c54d0a7e5a.PNG)
+
+#### SPAP for our model is as follows:
 
 ![WhatsApp Image 2020-02-12 at 7 05 14 PM](https://user-images.githubusercontent.com/60514533/74389003-e6d9fe00-4dca-11ea-8b01-12a2c237abcb.jpeg)
 
@@ -39,6 +43,10 @@ Status, Adult Mortality, infant deaths, percentage expenditure, under-five death
 This provides the summary distribution of dataset of how widely the data has been spread.
 
 ![summary](https://user-images.githubusercontent.com/60514533/74390812-5999a800-4dd0-11ea-8bac-2545ac6d2dca.PNG)
+
+## Regression Analysis
+
+We know that lower the p-value (<0.05) , more is the significance. From the below analysis we can observe the p values which may more significant role than the others.
 
 
 # Correlation Scatter Plot matrix
