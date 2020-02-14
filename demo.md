@@ -48,9 +48,13 @@ This provides the summary distribution of dataset of how widely the data has bee
 
 We know that lower the p-value (<0.05) , more is the significance. From the below analysis we can observe the p values which may more significant role than the others.
 
+![WhatsApp Image 2020-02-13 at 2 17 20 PM](https://user-images.githubusercontent.com/60514533/74492121-c29a2200-4e9b-11ea-8037-8cde16504fa7.jpeg)
+
 
 # Correlation Scatter Plot matrix
-This plot shows the correlation of target variable vs all dependent variables.
+This plot shows the correlation of target variable vs all dependent variables.Correlation ranges from -1 to 1.Value towards -1 are negatively correlated and values towards 1 are positively correlated and if the correlation is 0 then there is no relationship between the variables.
+
+We can observe that Adult mortality ,HIV aids,Income composition,Schooling Alcohol,Percentage expenditure,GDP are positivly correlated while population,Infant deaths and Under five deaths are negativly correlated.
 
 ![WhatsApp Image 2020-02-12 at 7 13 20 PM](https://user-images.githubusercontent.com/60514533/74389733-21dd3100-4dcd-11ea-985c-34e16edcc664.jpeg)
 
