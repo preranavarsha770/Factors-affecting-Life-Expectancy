@@ -57,7 +57,7 @@ We know that lower the p-value (<0.05) , more is the significance. From the belo
 We can observe that Income composition,Schooling Alcohol,Percentage expenditure,GDP,BMI are positivly correlated while Adult mortality and HIV aids and thinness are negatively correlated. Population,Infant deaths and Under five deaths are less correlated.
 
 ![WhatsApp Image 2020-02-13 at 7 53 32 PM](https://user-images.githubusercontent.com/60514533/74492594-6932f280-4e9d-11ea-9b34-6aeb79a275d2.jpeg)
-
+![WhatsApp Image 2020-02-13 at 8 02 22 PM](https://user-images.githubusercontent.com/60514533/74494063-ec564780-4ea1-11ea-82ca-439e0106809d.jpeg)
 
 #### Code:                                                                                            
 
