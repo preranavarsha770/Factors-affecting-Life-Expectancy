@@ -34,8 +34,10 @@ Status, Adult Mortality, infant deaths, percentage expenditure, under-five death
 |8.    |HIV/AIDS                 |Deaths per 1 000 live births HIV/AIDS (0-4 years)                                            |
 |9.    |GDP                      |Domestic Product per capita (in USD)                                                         |
 |10.    |Population               |Population of the country                                                                    |
-|11.    |Income composition of resources      |Income composition of resourcesHuman Development Index                                       |
-|12.    |Schooling                |Number of years of Schooling(years)                                                          |
+|11.    |thinness 5-9 years                      |Prevalence of thinness among children for Age 5 to 9(%)                             |
+|12.    |thinness 1-19 years               |Prevalence of thinness among children and adolescents for Age 10 to 19 (% )           |
+|13.    |Income composition of resources      |Income composition of resourcesHuman Development Index                                       |
+|14.    |Schooling                |Number of years of Schooling(years)                                                          |
  
 ## Summary Analysis
 This provides the summary distribution of dataset of how widely the data has been spread.
