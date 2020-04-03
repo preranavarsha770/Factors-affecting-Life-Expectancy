@@ -1,0 +1,230 @@
+<html>
+
+<head>
+<title>Title</title>
+</head>
+
+<body>
+
+<p>This is an R HTML document. When you click the <b>Knit HTML</b> button a web page will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:</p>
+
+<!--begin.rcode
+who <- read.csv("C:/Users/prera/Downloads/Life_Expectancy_Data.csv")
+head(who)
+#############Dimesion of the dataset############################
+
+dim(who)
+
+##############     TOP 10 DEVELPED & DEVELOPING Countires      ######################
+
+status.of.countries <- who[(who$Status %in% c("Developing") & who$Life.expectancy<55) | (who$Status %in% c("Developed") & who$Life.expectancy>80) ,]
+dim(status.of.countries)
+View(status.of.countries)
+
+class(status.of.countries)
+head(status.of.countries)
+#View(status.of.countries)
+WHONew<-status.of.countries
+#resting the index values
+row.names(WHONew) <- NULL
+#View(WHONew)
+dim(WHONew)
+
+###################### CLEANING THE DATA ######################################
+# For 347 rows running the for loop for chechking any NA values and replacing it with the mean of the 
+# particular country.
+for(i in 1:347)
+{
+  if(is.na(WHONew$Alcohol[i]))
+  {
+    WHONew$Alcohol[i] <- with(WHONew, mean(WHONew$Alcohol[Country == WHONew$Country[i]], na.rm = TRUE))
+  }
+}
+for(i in 1:347)
+{
+  if(is.na(WHONew$Hepatitis.B[i]))
+  {
+    WHONew$Hepatitis.B[i] <- with(WHONew, mean(WHONew$Hepatitis.B[Country == WHONew$Country[i]], na.rm = TRUE))
+  }
+}
+for(i in 1:347)
+{
+  if(is.na(WHONew$Total.expenditure[i]))
+  {
+    WHONew$Total.expenditure[i] <- with(WHONew, mean(WHONew$Total.expenditure[Country == WHONew$Country[i]], na.rm = TRUE))
+  }
+}
+dim(WHONew)
+#View(WHONew)
+
+# Deleting the Empty rows where there is no data present.
+new.life<- na.omit(WHONew)
+dim(new.life)
+
+View(new.life)
+
+############ Finding the summary or the distribution of the Dataset ##################
+
+g<-lm(Life.expectancy~Adult.Mortality + infant.deaths + Alcohol+percentage.expenditure+Hepatitis.B+
+        Measles+BMI+under.five.deaths+Polio+Total.expenditure+Diphtheria+HIV.AIDS+GDP+Population+
+        thinness..1.19.years+thinness.5.9.years+Income.composition.of.resources+Schooling, data=new.life) 
+summary(g)
+
+# Trying to remove variables to check how the variation in p values change.
+
+#REMOVING Hepatitis.B ,Total.expenditure,GDP
+g1<-lm(Life.expectancy~Adult.Mortality + infant.deaths + Alcohol+percentage.expenditure+
+        Measles+BMI+under.five.deaths+Polio+Diphtheria+HIV.AIDS+Population+
+        thinness..1.19.years+thinness.5.9.years+Income.composition.of.resources+Schooling, data=new.life) 
+summary(g1)
+
+# Furthur removing thinness..1.19.years and population.
+g2<-lm(Life.expectancy~Adult.Mortality + infant.deaths + Alcohol+percentage.expenditure+
+         Measles+BMI+under.five.deaths+Polio+Diphtheria+HIV.AIDS+
+         +thinness.5.9.years+Income.composition.of.resources+Schooling, data=new.life) 
+summary(g2)
+
+# Furthur removing percentage.expenditure and Polio,  Measles .
+g3<-lm(Life.expectancy~Adult.Mortality + infant.deaths + Alcohol+
+        +BMI+under.five.deaths+Diphtheria+HIV.AIDS+
+         +thinness.5.9.years+Income.composition.of.resources+Schooling, data=new.life) 
+summary(g3)
+
+coefficients(g)
+
+end.rcode-->
+
+<p>You can also embed plots, for example:</p>
+
+<!--begin.rcode fig.width=7, fig.height=6
+install.packages("corrplot")
+library(corrplot)
+library(dplyr)
+#install.packages("FFally", lib="/Library/Frameworks/R.framework/Versions/3.5/Resources/library")
+#library(FFally)
+#install.packages("GGally", lib="/Library/Frameworks/R.framework/Versions/3.5/Resources/library")
+#library(GGally)
+install.packages("car")
+library(car)
+#install.packages("MASS")
+#library(MASS)
+#install.packages("relaimpo", lib="/Library/Frameworks/R.framework/Versions/3.5/Resources/library")
+library(relaimpo)
+
+
+#Confidence interval of 95%
+confint(g,level=0.95)
+# This shows the Z value for each variable and there respective alpha/2 value.
+#If the z-value is too big in magnitude i.e either too positive or too negative, it indicates that the corresponding true #regression coefficient is not 0 and the corresponding X-variable matters
+
+# Predicted Values
+fitted(g)
+residuals(g) 
+#we get the actual - estimated values
+
+#Anova Table
+anova(g)
+# sum of squares from diff variables is seen in anova
+# We can also observe that the Total.expenditure and population are not significant.
+# We can remove them one by one to check how the significance changes. 
+# This is done in the later steps below while comparing the models.
+
+u=vcov(g)
+head(u)
+v=head(cov2cor(vcov(g)))
+head(v)
+temp <- influence.measures(g) # the one with the stars 
+temp
+#View(temp)
+#diagnostic plots
+plot(g)
+# Here in the graph Normal Q-Q we can see the plot of standardized residulas aganist all the variables.
+#The graph of standardized residulas and Leverage is shown in which the country numbered (52,328,318) seen to be outliers.
+#The scale-Location gives the plot between sqrt of residuals and fitted values in which we can see two different groups #fromed which are for developed and developing countries. We can also see that the country numbered 56,15 and 345 and #outside the normal range
+# Plot of residulas and the leverage is also observed here.
+
+# Assessing Outliers
+outlierTest(g)
+qqPlot(g, main="QQ Plot")# it says that they have two sd diff  
+#As we can see in the QQplot that residuals are closer to the reference line and do not form a independent class.
+#As all the points falls approximately inside the referenece life we can assume normality.
+leveragePlots(g) # leverage plots
+# Influential Observations
+# added variable plots
+avPlots(g)
+# shows for which quantity which are outliers
+
+# Cook's D plot
+#Cook's D plot  Data points with larger outliers and/or high leverage may distort the outcome and accuracy of a regression
+# identify D values > 4/(n-k-1)
+cutoff <- 4/((nrow(new.life)-length(g$coefficients)-2))
+plot(g, which=4, cook.levels=cutoff)
+# Influence Plot
+influencePlot(g, id.method="identify", main="Influence Plot", sub="Circle size is proportial to Cook's Distance" )
+#Here we can observe that the country numbered 318 and 330 have high leverage but is not an outlier.
+#while 52 and 328 are #outliers with high leverage.
+#56 and 345 are outliers with acceptable leverage.
+
+
+# Normality of Residuals
+# distribution of studentized residuals
+
+sresid <- studres(g)
+#We can say that most ideal values should fall between -1 and 1
+
+hist(sresid, freq=FALSE,
+     main="Distribution of Studentized Residuals")
+xfit<-seq(min(sresid),max(sresid),length=40)
+yfit<-dnorm(xfit)
+lines(xfit, yfit)
+#Non-constant Error Variance
+# Evaluate homoscedasticity
+# non-constant error variance test
+ncvTest(g)
+# plot studentized residuals vs. fitted values
+spreadLevelPlot(g)
+#Multi-collinearity
+# Evaluate Collinearityssss
+vif(g) # variance inflation factors
+sqrt(vif(g)) > 2 # problem? # anytg more than 2 is a prob 
+#Nonlinearity
+# component + residual plot
+crPlots(g)
+# Ceres plots
+#ceresPlots(g)
+# compare models
+f1<-g
+
+#After reviewing the anaova(g) we need to remove population and total expenditure one by one and
+#then see the comparied analysis
+
+# Removing population
+l1<-lm(Life.expectancy~Adult.Mortality + infant.deaths + Alcohol+percentage.expenditure+Hepatitis.B+
+         Measles+BMI+under.five.deaths+Polio+Total.expenditure+Diphtheria+HIV.AIDS+GDP+
+         thinness..1.19.years+thinness.5.9.years+Income.composition.of.resources+Schooling, data=new.life) 
+anova(l1)
+
+#Removing Total Expenditure
+l2<-lm(Life.expectancy~Adult.Mortality + infant.deaths + Alcohol+percentage.expenditure+Hepatitis.B+
+         Measles+BMI+under.five.deaths+Polio+Diphtheria+HIV.AIDS+GDP+
+         thinness..1.19.years+thinness.5.9.years+Income.composition.of.resources+Schooling, data=new.life) 
+anova(l2)
+anova(f1, l2)
+step <- stepAIC(g, direction="both")# step1 take corelation. step2 take highest corellation
+step$anova # display results
+#The step wise regression provides us with the final suitable model for multiple regression which include 
+#Adult.Mortality, infant.deaths,Alcohol,percentage.expenditure, Measles ,BMI ,under.five.deaths ,
+#Polio , Diphtheria , HIV.AIDS , thinness.5.9.years,Income.composition.of.resources, Schooling
+
+predict.lm(g, data.frame(Adult.Mortality=66, infant.deaths=1 ,Alcohol=10.62,percentage.expenditure=7172.275229,Hepatitis.B=94,
+                           Measles=104,BMI=63.4,under.five.deaths=	1,Polio=92,Total.expenditure=9.5,Diphtheria=92,HIV.AIDS=0.1,GDP=42742.99898,Population=216917,
+                           thinness..1.19.years=0.7,thinness.5.9.years=0.6,Income.composition.of.resources=0.925,Schooling=19.1) )
+
+#Now finally we try to predict the output of the model using the predict functionn to see how well the model is.
+#you can see from the above Step anova  we get the best possible fit model. Therefore, applying the final
+#model to predict the future values we get life expectancy of 85.42839
+
+end.rcode-->
+
+</body>
+</html>
